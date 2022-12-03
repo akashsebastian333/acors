@@ -1,12 +1,18 @@
 <html>
-     <head><meta name="referrer" content="no-referrer"></head>
+     <head>
+         <meta name="referrer" content="no-referrer">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     </head>
      <body>
          <h2>CORS PoC</h2>
-         <div id="demo">
-             <form>
-                 <label for="url">Enter website URL:</label><br>
-                 <input type="text" id="url" name="url"><br><br>
-                 <button type="button" onclick="cors()">Exploit</button>
+         <div id="demo" class="container-fluid">
+             <form class="form-inline">
+                 <label for="url" class="sr-only">Enter website URL:</label>
+                 <input type="text" id="url" name="url" class="form-control mb-2 mr-sm-2">
+                 <button type="button" onclick="cors()" class="btn btn-primary mb-2">Exploit</button>
              </form>
          </div>
          <script>
@@ -25,3 +31,4 @@
          </script>
      </body>
  </html>
+
